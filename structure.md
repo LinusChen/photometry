@@ -11,6 +11,7 @@ The functions in the following table need be developed.
 |  Function name        |  Input      |    Output      | Note |
 |-----------------------|:-----------:|---------------:|-------|
 | get_res               | bp, sp      | res            |
+| unitBB                | T           | sp             |
 | get_res_unitBB        | bp, T       | res            |
 | get_resGrid_unitBB    | bp, grid_T  | grid_res       | as ResultGrid |
 | write_resGrid_unitBB  | bp, grid_T, bn, dir  |       | write grid_res to "dir/bn.pickle" |
@@ -22,3 +23,4 @@ The class DataObs (maybe renamed to ObservedSED) need to have the methods in the
 | get_res               | sp          | res            | As a 1d array. |
 | write_resGrid_unitBB  | bp, grid_T, bn, dir  |       | write grid_res to "dir/bn.pickle" |
 | read_resGrid_unitBB   | bp, grid_T  |                | initializing self.l_res_grid|
+| get_res_unitBB        | T          | res            | As a 1d array. |
