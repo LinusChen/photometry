@@ -7,6 +7,7 @@ Terminology/shorthands:
 - ResultGrid: A class. Contains a parameter grid, and the pre-tabulated results of a (typically expensive-to-evaluate) function on it.
 
 The functions in the following table need be developed.
+Maybe in the module "response.py"
 
 |  Function name        |  Input      |    Output      | Note |
 |-----------------------|:-----------:|---------------:|-------|
