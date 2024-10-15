@@ -15,13 +15,13 @@ Maybe in the module "response.py"
 | unitBB                | T           | sp             |
 | get_res_unitBB        | bp, T       | res            |
 | get_resGrid_unitBB    | bp, grid_T  | grid_res       | as ResultGrid |
-| write_resGrid_unitBB  | bp, grid_T, bn, dir  |       | write grid_res to "dir/bn.pickle" |
+| dump_resGrid_unitBB  | bp, grid_T, bn, dir  |       | write grid_res to "dir/bn.pickle" |
 
-The class DataObs (maybe renamed to ObservedSED) need to have the methods in the following table.
+The class ObservedSED need to have the methods in the following table.
 
 |  Function name        |  Input      |    Output      | Note |
 |-----------------------|:-----------:|---------------:|-------|
 | get_res               | sp          | res            | As a 1d array. |
-| write_resGrid_unitBB  | bp, grid_T, bn, dir  |       | write grid_res to "dir/bn.pickle" |
-| read_resGrid_unitBB   | bp, grid_T  |                | initializing self.l_res_grid|
-| get_res_unitBB        | T          | res            | As a 1d array. |
+| dump_resGrid_unitBB   | grid_T, dir |       | for each band, write grid_res to "dir/bn.pickle" |
+| load_resGrid_unitBB   |             |                | initializing self.l_res_grid|
+| get_res_unitBB        | T           | res            | As a 1d array. |
