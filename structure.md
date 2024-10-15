@@ -32,11 +32,18 @@ A: The data part certainly can pickled.
     So, maybe develop deploy() and undeploy().
 
 Q: How to avoid redundantly creating the pretabulate tables?
-A: develope a check function check_file_resTable(filename, grid_perParam,).
+A: develop a checking function check_file_resTable(filename, grid_perParam,).
    return code:
    - 0: a valid ResTable is read, with correct parameter grid.
    - 1: file not exist (or cannot be read).
    - 2: cannot pickle.load
    - 3: not a ResTable
    - 4: not on the correct grid.
-   
+
+Should I further develop a class ParamGrid?
+could be over-design.
+If I do, it should contain:
+- the 1d grid for each parameter.
+- keys_param
+- shape (derived information).
+
