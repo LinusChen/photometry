@@ -34,16 +34,17 @@ A: The data part certainly can pickled.
 Q: How to avoid redundantly creating the pretabulate tables?
 A: develop a checking function check_file_resTable(filename, grid_perParam,).
    return code:
+   - 3: cannot pickle.load, including the case that file not existing, not readable...
+   - 2: not a ResTable
+   - 1: the Res Table is not on the correct grid.
    - 0: a valid ResTable is read, with correct parameter grid.
-   - 1: file not exist (or cannot be read).
-   - 2: cannot pickle.load
-   - 3: not a ResTable
-   - 4: not on the correct grid.
 
 Should I further develop a class ParamGrid?
-could be over-design.
-If I do, it should contain:
-- the 1d grid for each parameter.
+Done!
+It contains:
 - keys_param
-- shape (derived information).
+- the 1d grid for each parameter.
+- and the folowing derived information...
+- shape
+- dict_param
 
