@@ -22,8 +22,8 @@ The class ObservedSED need to have the methods in the following table.
 |  Function name        |  Input      |    Output      | Note |
 |-----------------------|:-----------:|---------------:|-------|
 | get_res               | sp          | res            | As a 1d array. |
-| dump_resTable_unitBB  | grid_T, dir |       | for each band, write grid_res to "dir/bn.pickle" |
-| load_resTable_unitBB  |             |                | initializing self.l_res_grid|
+| dump_resTable_unitBB  | grid, dir   |       | for each band, write grid_res to "dir/bn.pickle" |
+| load_resTable_unitBB  | grid, dir   |                | initializing self.res_grid_BB|
 | get_res_unitBB        | T           | res            | As a 1d array. |
 
 Q: Can ResTable be pickled?
