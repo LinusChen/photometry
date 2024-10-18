@@ -52,3 +52,6 @@ It contains:
 
 The class ModelParam should also have a method get_res(observed_sed),
 which computes, for this SED observed, what would be the model results, with this parameter set.
+
+All the get_sepectum*() methods of ModelParam is deprecated.
+Only ModelFull should have those moethods.
