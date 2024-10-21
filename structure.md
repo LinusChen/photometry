@@ -5,17 +5,26 @@ Terminology/shorthands:
 - res: synthetic photometry, or "response", represented as an band-averaged flux, in Jy.
 - get_res: normally mean "get response".
 - ResTable: A class. Contains a parameter grid, and the pre-tabulated results of a (typically expensive-to-evaluate) function on it.
+- fun_sp: a function to get a unit spectrum for a spectral parameter set.
+- atlas: name of "atlas", that contains a grid of stellar spectrum. Could be "k93models", "ck04models", or "phoenix".
 
 The functions in the following table need be developed.
-Maybe in the module "response.py"
+In the module "spectrum_template.py"
 
-|  Function name        |  Input      |    Output      | Note |
-|-----------------------|:-----------:|---------------:|-------|
-| get_res               | bp, sp      | res            |
-| unitBB                | T           | sp             |
-| get_res_unitBB        | bp, T       | res            |
-| get_resTable_unitBB    | bp, grid   | grid_res       | as ResTable |
-| dump_resTable_unitBB  | bp, grid, bn, dir  |       | write grid_res to "dir/bn.pickle" |
+|  Function name        |  Input                       |    Output      | Note |
+|-----------------------|:----------------------------:|---------------:|-------|
+| unitBB                | T                            | sp             |
+| unit_stellar          | T,g,m, atlas                 | sp             |
+
+The functions in the following table need be developed.
+In the module "response.py"
+
+|  Function name        |  Input                       |    Output      | Note |
+|-----------------------|:----------------------------:|---------------:|-------|
+| get_res               | bp, sp                       | res            |
+| get_res_unitBB        | bp, T                        | res            |
+| get_resTable          | bp, grid, fun_sp             | grid_res       | as ResTable |
+| dump_resTable         | bp, grid, bn, dir, fun_sp    |       | write grid_res to "dir/bn.pickle" |
 
 The class ObservedSED need to have the methods in the following table.
 
